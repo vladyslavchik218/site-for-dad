@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section with Parallax Effect -->
+<section class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/60 to-slate-900/80 z-10"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30 z-0"></div>
+    
+    <div class="relative z-20 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
+        <div class="mb-8">
+            <span class="text-6xl md:text-8xl animate-pulse">❤️</span>
+        </div>
+        <h1 class="font-['Playfair_Display'] text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-amber-200 via-pink-300 to-purple-300 bg-clip-text text-transparent drop-shadow-2xl">
+            З Днем Батька!
+        </h1>
+        <p class="font-['Inter'] text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+Найкращому татові на світі — Антону
+        </p>
+        <button onclick="triggerConfetti(event)" class="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-pink-500 rounded-full text-white font-semibold text-lg shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 transform hover:scale-105 overflow-hidden">
+            <span class="relative z-10">🎉 Натисни для свята</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </button>
+    </div>
+    
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+        <svg class="w-8 h-8 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Gallery Section with Flip Cards -->
+<section class="py-20 px-4 relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-200 to-pink-300 bg-clip-text text-transparent">
+                Мої щирі вдячності моєму татові
+            </h2>
+            <p class="font-['Inter'] text-gray-400 text-lg">Моменти, які назавжди в серці</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Memory Card 1 -->
+            <div class="memory-card perspective-1000" data-aos="flip-left" data-aos-delay="100">
+                <div class="card-inner relative w-full h-80 transition-transform duration-700 transform-style-3d cursor-pointer">
+                    <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-slate-700/50 backface-hidden">
+                        <div class="text-5xl mb-4">🏋️</div>
+                        <h3 class="font-['Playfair_Display'] text-2xl font-semibold text-amber-200 mb-2">14 Років Тому</h3>
+                        <p class="font-['Inter'] text-gray-400 text-sm text-center">Натисни, щоб дізнатися більше</p>
+                    </div>
+                    <div class="card-back absolute inset-0 bg-gradient-to-br from-purple-900 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-purple-700/50 backface-hidden rotate-y-180">
+                        <p class="font-['Inter'] text-gray-200 text-center leading-relaxed">
+                            Тато, дякую шо ти все таки вмовив маму взяти мене біля депота 14 років тому.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Memory Card 2 -->
+            <div class="memory-card perspective-1000" data-aos="flip-left" data-aos-delay="200">
+                <div class="card-inner relative w-full h-80 transition-transform duration-700 transform-style-3d cursor-pointer">
+                    <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-slate-700/50 backface-hidden">
+                        <div class="text-5xl mb-4">🚗</div>
+                        <h3 class="font-['Playfair_Display'] text-2xl font-semibold text-amber-200 mb-2">За Кермом</h3>
+                        <p class="font-['Inter'] text-gray-400 text-sm text-center">Натисни, щоб дізнатися більше</p>
+                    </div>
+                    <div class="card-back absolute inset-0 bg-gradient-to-br from-purple-900 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-purple-700/50 backface-hidden rotate-y-180">
+                        <p class="font-['Inter'] text-gray-200 text-center leading-relaxed">
+                            Дякую, шо дозволив сісти за руль машини, і це не закінчилось ще одним кредитом на ремонт.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Memory Card 3 -->
+            <div class="memory-card perspective-1000" data-aos="flip-left" data-aos-delay="300">
+                <div class="card-inner relative w-full h-80 transition-transform duration-700 transform-style-3d cursor-pointer">
+                    <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-slate-700/50 backface-hidden">
+                        <div class="text-5xl mb-4">💰</div>
+                        <h3 class="font-['Playfair_Display'] text-2xl font-semibold text-amber-200 mb-2">Кожна Копійка</h3>
+                        <p class="font-['Inter'] text-gray-400 text-sm text-center">Натисни, щоб дізнатися більше</p>
+                    </div>
+                    <div class="card-back absolute inset-0 bg-gradient-to-br from-purple-900 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-purple-700/50 backface-hidden rotate-y-180">
+                        <p class="font-['Inter'] text-gray-200 text-center leading-relaxed">
+                            Тат, дякую за кожну витрачену копійку на мене, шкода, шо так і не дійшло до гривні.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Memory Card 4 -->
+            <div class="memory-card perspective-1000" data-aos="flip-left" data-aos-delay="400">
+                <div class="card-inner relative w-full h-80 transition-transform duration-700 transform-style-3d cursor-pointer">
+                    <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-slate-700/50 backface-hidden">
+                        <div class="text-5xl mb-4">😂</div>
+                        <h3 class="font-['Playfair_Display'] text-2xl font-semibold text-amber-200 mb-2">Твої Жарти</h3>
+                        <p class="font-['Inter'] text-gray-400 text-sm text-center">Натисни, щоб дізнатися більше</p>
+                    </div>
+                    <div class="card-back absolute inset-0 bg-gradient-to-br from-purple-900 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-purple-700/50 backface-hidden rotate-y-180">
+                        <p class="font-['Inter'] text-gray-200 text-center leading-relaxed">
+                            Пам'ятаю, як накачав прес від сміху, коли ти розповідав жарти.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Memory Card 5 -->
+            <div class="memory-card perspective-1000" data-aos="flip-left" data-aos-delay="500">
+                <div class="card-inner relative w-full h-80 transition-transform duration-700 transform-style-3d cursor-pointer">
+                    <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-slate-700/50 backface-hidden">
+                        <div class="text-5xl mb-4">🤝</div>
+                        <h3 class="font-['Playfair_Display'] text-2xl font-semibold text-amber-200 mb-2">Завжди ЗА</h3>
+                        <p class="font-['Inter'] text-gray-400 text-sm text-center">Натисни, щоб дізнатися більше</p>
+                    </div>
+                    <div class="card-back absolute inset-0 bg-gradient-to-br from-purple-900 to-slate-900 rounded-2xl p-6 flex flex-col items-center justify-center shadow-2xl border border-purple-700/50 backface-hidden rotate-y-180">
+                        <p class="font-['Inter'] text-gray-200 text-center leading-relaxed">
+                            Дякую за те, шо завжди за, коли я говорю свої плани, або починаю щось нове.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Message Section with Typing Effect -->
+<section class="py-20 px-4 relative">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-200 to-pink-300 bg-clip-text text-transparent">
+                Особливе Послання
+            </h2>
+            <p class="font-['Inter'] text-gray-400 text-lg">Слова з глибини серця</p>
+        </div>
+        
+        <div class="message-container bg-gradient-to-br from-slate-800/50 to-purple-900/30 backdrop-blur-lg rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-700/50" data-aos="zoom-in">
+            <div class="text-center mb-8">
+                <button id="revealMessage" class="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-white font-semibold text-lg shadow-xl hover:shadow-pink-500/50 transition-all duration-300 transform hover:scale-105">
+                    💌 Прочитати послання
+                </button>
+            </div>
+            
+            <div id="messageContent" class="hidden">
+                <div class="relative">
+                    <div class="absolute -left-4 -top-4 text-6xl text-pink-500/30">"</div>
+                    <p id="typingText" class="font-['Inter'] text-xl md:text-2xl text-gray-200 leading-relaxed text-center min-h-[200px]"></p>
+                    <div class="absolute -right-4 -bottom-4 text-6xl text-pink-500/30">"</div>
+                </div>
+                <div class="mt-8 text-center">
+                    <p class="font-['Playfair_Display'] text-2xl text-amber-200">З любов'ю, твій син Влад</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 px-4 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="font-['Inter'] text-gray-500">Зроблено з ❤️ для найкращого тата</p>
+        <p class="font-['Inter'] text-gray-600 text-sm mt-2">День Батька 2026</p>
+    </div>
+</footer>
+{% endblock %}
