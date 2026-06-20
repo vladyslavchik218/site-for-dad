@@ -1,9 +1,12 @@
 import os
 from flask import Flask, render_template
 
+# Get the absolute path to the project directory
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 app = Flask(__name__, 
-            static_folder='static',
-            template_folder='templates')
+            static_folder=os.path.join(basedir, 'static'),
+            template_folder=os.path.join(basedir, 'templates'))
 
 @app.route('/')
 def home():
